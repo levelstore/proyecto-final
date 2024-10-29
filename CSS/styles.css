@@ -1,0 +1,723 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    margin-top: 80px;
+}
+
+nav{
+    background: black;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    display: block;
+    z-index: 1000;
+    top: 0;
+}
+
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 75px;
+    margin-top: -19px;
+}
+
+nav .ul_nav li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 -1px;
+    transition: .3s ease;
+}
+nav .ul_nav li a{
+    color: white;
+    font-size: 18px;
+    padding: 30px 40px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    transition: .3s ease;
+}
+
+
+nav li:hover > a{
+    background: rgb(241, 210, 31);
+    color: black;
+}
+
+
+
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+
+.carrito{
+    height: auto;
+    width: 32px;
+    margin-left: 40px;
+    margin-top: 25px;
+    position: absolute;
+    transition: 0.45s;
+}
+
+.carrito:hover{
+    background: linear-gradient(45deg, transparent, rgba(145, 108, 6, 0.747));
+    border-radius: 13px;
+    transform: rotate(-10deg)  scale(1.5);
+    box-shadow: 0 0 6px rgba(145, 108, 6, 0.747),
+                0 0 8px rgba(145, 108, 6, 0.747),
+                0 0 11px rgba(145, 108, 6, 0.747),
+                0 0 9px rgba(145, 108, 6, 0.747);
+    
+}
+
+
+.buscar{
+    margin-left: 120px;
+    margin-top: -20px;
+    padding: 10px 20px  10px 10px;
+    border-radius: 10px;
+}
+
+.main-div {
+    background-image: url(/IMAGENES/ADICIONES/cap2.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 69vh;
+}
+
+#main-h {
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    font-size: 50px; 
+    text-shadow: 0 0 30px gold,
+                0 0 300px gold,
+                0 0 300px gold,
+                0 0 350px gold;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.76);
+    padding: 33vh 0px 0px 0px;
+    
+}
+
+#main-p {
+    text-transform: uppercase;
+    font-family: 'Playfair Display', cursive;
+    opacity: 100%;
+    color: rgb(243, 243, 243);
+    font-size: 16px ;
+    text-shadow: 0 0 5px gold,
+                0 0 25px gold,
+                0 0 50px gold,
+                0 0 200px gold;
+    font-weight: 400 ;
+    letter-spacing: -1px;
+}
+
+.destacado {
+    text-transform: uppercase;
+    color: black;
+    font-size: 63px;
+    font-weight: 900;
+    padding: 150px 1px 100px 1px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media (min-width: 1240px){
+    nav .ul_nav{
+        float: right;
+        margin-right: 20px;
+        display: flex;
+    }
+
+    
+
+}
+
+
+
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav .ul_nav li a{
+        font-size: 16px;
+    }
+
+    .carrito{
+        margin-top: 400px;
+    }
+
+    .destacado{
+        font-size: 40px;
+    }
+
+    
+    
+    #main-h{
+        font-size: 35px;
+    }
+    
+    #main-p{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 375px){
+    .checkbtn{
+        display: block;
+    }
+    .checkbtn > img{
+        height: auto;
+        width: 16%;
+        margin-left: 50%;
+        margin-top: 5%;
+    }
+
+    
+
+    .logo{
+        height: 50px;
+    }
+
+    
+}
+
+
+@media (max-width: 1240px){
+    .checkbtn{
+        display: block;
+    }
+    .checkbtn > img{
+        height: auto;
+        width: 16%;
+        margin-left: 47%;
+    }
+
+    
+
+    .logo{
+        height: 75px;
+        width: auto;
+    }
+
+    .ul_nav{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(51, 51, 51);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        position: fixed;
+        
+    }
+    nav .ul_nav li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    li a:hover{
+        background: none;
+    }
+
+    
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+
+
+
+@media (max-width: 1227px ){
+
+    .carrito{
+        margin: 20px 0 30px -15px;
+        
+    }
+
+    .buscar{
+        margin: 40px 0 40px 10px;
+    }
+
+    
+}
+
+
+
+
+
+:root {
+
+    --first-color: hsl(82, 60%, 28%);
+    --title-color: hsl(0, 0%, 15%);
+    --text-color: hsl(0, 0%, 35%);
+    --body-color: hsl(0, 0%, 95%);
+    --container-color: hsl(56, 100%, 89%);
+
+
+    --body-font: "Poppins", sans-serif;
+    --h2-font-size: 1.25rem;
+    --small-font-size: .813rem;
+}
+
+
+@media screen and (min-width: 1120px) {
+    :root {
+        --h2-font-size: 1.5rem;
+        --small-font-size: .875rem;
+    }
+}
+
+
+.card__img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+
+.container {
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+
+}
+
+.card__container {
+    display: grid;
+    row-gap: 3.5rem;
+}
+
+.card__article {
+    position: relative;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.card__article:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15),
+                0 0 300px rgba(0, 0, 0, 0.15),
+                0 0 100px rgba(0, 0, 0, 0.15),
+                0 0 20px black;
+    border-radius: 25px;
+}
+
+.card__img {
+    width: 328px;
+    border-radius: 1.5rem;
+}
+
+.card__data {
+    width: 280px;
+    background-color: var(--container-color);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15),
+                0 0 15px rgba(0, 0, 0, 0.15),
+                0 0 20px rgba(0, 0, 0, 0.15),
+                0 0 50px gold;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -9rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+
+.card__description {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: .25rem;
+}
+
+.card__title {
+    font-size: var(--h2-font-size);
+    font-weight: 500;
+    color: var(--title-color);
+    margin-bottom: .75rem;
+}
+
+
+
+.card__button {
+    
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    color: var(--first-color);
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 15px 10px;
+    cursor: pointer;
+    animation: pulse 1.2s infinite;
+    border-radius: 10px;
+}
+
+.card__button:hover {
+    transition: .5s ease;
+    text-decoration: underline;
+    transform: scale(1.15);
+    animation: none;
+    text-decoration: none;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15),
+                0 0 300px rgba(0, 0, 0, 0.15),
+                0 0 100px rgba(0, 0, 0, 0.15),
+                0 0 20px black;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.9); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0.9); }
+}
+
+.card__article:hover .card__data {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.card__article:hover {
+    animation: remove-overflow 2s forwards;
+    
+}
+
+.card__article:not(:hover) {
+    animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+    animation: remove-data 1s forwards;
+}
+
+@keyframes show-data {
+    50% {
+        transform: translateY(-10rem);
+    }
+    100% {
+        transform: translateY(-7rem);
+    }
+}
+
+@keyframes remove-overflow {
+    to {
+        overflow: initial;
+    }
+}
+
+@keyframes remove-data {
+    0% {
+        transform: translateY(-7rem);
+    }
+    50% {
+        transform: translateY(-10rem);
+    }
+    100% {
+        transform: translateY(.5rem);
+    }
+}
+
+@keyframes show-overflow {
+    0% {
+        overflow: initial;
+        pointer-events: none;
+    }
+    50% {
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .container {
+        margin-inline: 1rem;
+    }
+
+    .card__data {
+        width: 250px;
+        padding: 1rem;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .card__container {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .container {
+        height: 100vh;
+        margin-bottom: 00px;
+    }
+
+    .card__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .card__img {
+        width: 348px;
+    }
+    .card__data {
+        width: 316px;
+        padding-inline: 2.5rem;
+    }
+}
+
+
+@keyframes show{
+    from{ 
+        opacity: 0;
+        scale: 15%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
+.card__img, .container{
+    view-timeline-name: --animation;
+    view-timeline-axis: block;
+
+    animation-timeline: --animation;
+    animation-name: show;
+    animation-range: entry 15% cover 18%;
+    animation-fill-mode: backwards;
+}
+.destacado{
+    view-timeline-name: --animation;
+    view-timeline-axis: block;
+
+    animation-timeline: --animation;
+    animation-name: show;
+    animation-range: entry 15% cover 35%;
+    animation-fill-mode: backwards;
+}
+
+.menu{
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.opmenu li a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: .25s ease;
+}
+
+.opmenu li a:hover {
+    background-color: gold;
+    color: black;
+}
+
+.opmenu li ul {
+    display: none;
+    position: absolute;
+    min-width: 300px;
+}
+
+.opmenu li:hover >ul {
+    display: block;
+    
+}
+
+.opmenu li ul li {
+    position: relative;
+}
+
+.opmenu li ul li ul{
+    right: -300px;
+    top: 0px;
+}
+
+#interesado{
+    margin-top: 400px;
+}
+
+@media screen and (max-width: 1150px) {
+    #interesado {
+        margin-top: 0px;
+    }
+
+}
+
+.cred{
+    color: gold;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    text-shadow: 0 0 5px #ffd700,
+                0 0 25px gold,
+                0 0 50px gold,
+                0 0 200px gold
+}
+
+.menu-emergente {
+    position: fixed;
+    top: 40%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: inline-block;
+    text-align: right;
+    z-index: 1000;
+}
+
+.etiqueta {
+    background-color: black;
+    color: white;
+    padding: 5px 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.etiqueta img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.iconos {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border-radius: 5px;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+}
+
+.menu-emergente:hover .iconos {
+    display: block;
+}
+
+.iconos a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.iconos a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+@media (max-width: 768) {
+    .menu-emergente {
+        top: 10px;
+        right: 10px;
+        transform: none;
+    }
+}
+
+.pie-pagina{
+    width: 100%;
+    background-color: black;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 180px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: black;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: aqua;
+}
+.pie-pagina .grupo-2{
+    background-color: rgb(14, 14, 14);
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+}
+
